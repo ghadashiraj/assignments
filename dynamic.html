@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn1" onclick="addElementToDiv()">Add Element</button>
+    <!-- <button id="btn2" onclick="removeElementToDiv()">remove Element</button> -->
+    <div class="t1">
+        
+    </div>
+
+
+
+    <script>
+        
+        function addElementToDiv(){
+            var d = document.querySelector(".t1");
+            var nd = document.createElement("div");
+            nd.id = "d6";
+            nd.name = "newDiv";
+
+            var ip = document.createElement("input");
+            ip.id = "nip";
+            ip.name = "newip"; 
+            ip.type =  "text";
+            ip.placeholder = "Enter your name";
+            
+            var b = document.createElement("button");
+            b.id = "nb";
+            b.name = "newb"; 
+            b.value = "remove";
+            b.innerText = "remove";
+
+            b.addEventListener('click', function(){
+                var d = document.querySelector(".t1");
+                var lc = d.lastElementChild;
+                d.removeChild(lc);
+                
+
+
+            });
+
+            
+
+            
+            nd.appendChild(ip);
+            nd.appendChild(b);
+            d.appendChild(nd);
+            
+
+        }
+        
+        
+    </script>
+</body>
+</html>
