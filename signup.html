@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-cont">
+        <form action="" class="myform">
+            <h6 style=" text-align: center;">Register here</h6>
+            <div>
+                <label for="">Username</label> <br>
+                <input type="text" name="" placeholder="Enter Username Here" id="ru">
+            </div>
+            <div>
+                <label for="">Email</label>  <br>
+                <input type="email" name="" id="re" placeholder="Enter Email Here">
+            </div>
+            <div>
+                <label for="">Password</label>  <br>
+                <input type="text" name="" id="rp" placeholder="Enter Password Here">
+            </div>
+            <div>
+                <label for="">Confirm password</label>  <br>
+                <input type="text" name="" id="rcp" placeholder="Enter Confirm Password Here">
+            </div>
+            <button type="button" onclick="fix()" class="form-sub" value="Sub">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        var username = document.getElementById('ru');
+        var password = document.getElementById('rp');
+        var email = document.getElementById('re');
+        var cpass = document.getElementById('rcp');
+        function fix(){
+           
+            if(password.value=='' && username.value==''){
+            alert("username and password is required");
+           }
+           else if(username.value==''){
+            alert("user name is required");
+           }
+           else if(password.value==''){
+            alert("password is required");
+           }
+           else if(password.value!=cpass.value){
+            alert("Confirm password is wrong");
+           }
+          else{
+            alert("login");
+          }
+          if(password.value!='' && username.value!='' && password.value!=''){
+            if(password.value==cpass.value){    
+            window.open("index.html");
+            }
+            else{
+                window.open("#");
+            }
+          }
+            }
+        
+          
+            
+         
+        
+        </script>
+</body>
+
+</html>
